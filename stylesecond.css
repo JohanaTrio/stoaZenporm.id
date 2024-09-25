@@ -1,0 +1,812 @@
+:root {
+  --color1: rgb(1, 12, 25);
+  --color2: rgb(0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  min-height: 2000px;
+  background-color: var(--color2);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/*navbar*/
+.navbar {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4rem 4%;
+  background-color: var(--color1);
+  position: fixed;
+  top: 0%;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+}
+
+.navbar .navbar-logo {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-clip: none;
+  background-position: 0;
+}
+
+.navbar .navbar-nav {
+  margin-left: auto; /* Mendorong elemen ke sisi kanan */
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0 1.6rem;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.navbar .navbar-nav a:hover {
+  color: rgb(7, 89, 122);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: rgb(7, 89, 122);
+}
+
+#menu {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(asset/image4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.hero .content {
+  padding: 1rem 9%;
+  max-width: 60rem;
+  z-index: 2;
+}
+
+.hero .content h1 {
+  color: white;
+  font-size: 5.5em;
+  line-height: 1.4;
+}
+
+.hero .content p {
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.hero .content p span {
+  font-size: 2.2rem;
+  color: rgb(7, 89, 122);
+  font-weight: 500;
+}
+.hero .content .cta {
+  margin-top: 1.2rem;
+  display: inline-block;
+  padding: 1rem 1.7rem;
+  color: white;
+  background-color: var(--color1);
+  font-size: 1.3rem;
+  z-index: 10;
+  position: relative;
+}
+
+.hero .content .cta:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 13, 31);
+}
+
+/*Quotes*/
+.quotes {
+  display: flex;
+  padding: 7rem 9%;
+  justify-content: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(asset/img45.jpg);
+  background-size: cover;
+}
+
+.quotes::after {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 0.994) 4%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  z-index: 1;
+}
+.quotes::before {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 0.994) 1%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  z-index: 1;
+}
+
+.quotes .content {
+  z-index: 2;
+}
+.quotes .content h1 {
+  font-size: 3.7rem;
+  color: rgb(7, 89, 122);
+  margin-bottom: 2rem;
+}
+
+.quotes .content p {
+  text-align: justify;
+  justify-content: center;
+  padding: 1rem 8%;
+  font-size: 2rem;
+}
+
+.quotes .slider {
+  max-width: 1450px;
+  position: relative;
+  padding: 10px 9px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slider i {
+  top: 50%;
+  background: rgb(255, 255, 255);
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 46px;
+  transition: transform 0.5s ease;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.slider i:first-child {
+  left: 20px;
+}
+.slider i:last-child {
+  right: 10px;
+}
+
+.quotes .slider .item {
+  display: flex;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 1.2s ease;
+}
+
+.item img {
+  border-radius: 20px;
+  height: auto;
+  width: calc(100% / 3);
+  object-fit: cover;
+  margin-left: 10px;
+}
+.slider img:first-child {
+  margin-left: 0px;
+}
+
+.journal {
+  background-image: url(asset/peakpx1.jpg);
+  display: flex;
+  padding: 7rem 9%;
+  justify-content: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+}
+
+.journal::after {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 0.994) 4%,
+    rgba(255, 255, 255, 0) 10%
+  );
+  z-index: 1;
+}
+
+.journal::before {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 0.994) 4%,
+    rgba(255, 255, 255, 0) 10%
+  );
+  z-index: 1;
+}
+
+.journal .content h1 {
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  font-size: 4.7rem;
+  color: rgb(7, 89, 122);
+}
+
+.journal .content p {
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.journal .content .image-containerfirst {
+  padding: 1.4rem 12%;
+}
+
+.journal .content .image-containerfirst h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.journal .content .image-containerfirst img {
+  width: 30%;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.journal .structure {
+  margin-top: 3rem;
+  text-align: center;
+}
+.journal .structure h2 {
+  font-size: 2.4rem;
+}
+
+.journal .structure p {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.journal .structure .Step1 p {
+  padding: 0 30%;
+}
+.journal .structure .Step1 h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.journal .structure .Step2 p {
+  padding: 0 30%;
+}
+.journal .structure .Step2 h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.2rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.journal .structure .Step3 p {
+  padding: 0 30%;
+}
+.journal .structure .Step3 h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 1.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.journal .structure .Step4 p {
+  padding: 0 30%;
+}
+.journal .structure .Step4 h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 1.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.check {
+  display: flex;
+  padding: 7rem 9%;
+  justify-content: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+}
+
+.check .content h1 {
+  margin-top: 5rem;
+  font-size: 4.7rem;
+  color: rgb(7, 89, 122);
+}
+
+.check .content p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.check .content .Check1 {
+  margin-bottom: 2rem;
+}
+
+.check .content .Check1 h3 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.check .content .Check1 h4 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.check .row .terra {
+  padding: 0 20%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.check .row p {
+  font-size: 1.6rem;
+  text-align: left;
+  margin-right: 10px; /* Memberi jarak antara p dan label */
+  flex: 1; /* Buat elemen p mengisi ruang yang ada */
+}
+
+.check .terra label {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.check .terra input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.check .content .Check2 {
+  margin-bottom: 2rem;
+}
+
+.check .content .Check2 h3 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.2rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.check .content .Check2 h4 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.check .Reflection {
+  margin-top: 4rem;
+}
+
+.check .Reflection h2 {
+  font-size: 3rem;
+}
+
+.check .Reflection h3 {
+  margin-top: 3rem;
+  font-size: 2.6rem;
+}
+
+.check .Reflection p {
+  padding: 0 12%;
+}
+
+.check .Reflection p span {
+  color: rgb(7, 89, 122);
+}
+
+.test {
+  display: flex;
+  padding: 7rem 9%;
+  justify-content: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+}
+
+.test .content h1 {
+  margin-top: 5rem;
+  font-size: 4.7rem;
+  color: rgb(7, 89, 122);
+}
+
+.test .content p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.test .questions {
+}
+
+.test .questions h3 {
+  margin-top: 2rem;
+  font-size: 2.2rem;
+}
+
+.test .questions p {
+  padding: 0 20%;
+  margin-top: 0rem;
+  align-items: center;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.test .total h3 {
+  margin-top: 8rem;
+  font-size: 2.2rem;
+  margin-bottom: 4rem;
+}
+
+.test .total p {
+  text-align: center;
+}
+
+.test .category h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.test .category p {
+  text-align: center;
+}
+
+.meditation {
+  display: flex;
+  padding: 7rem 9%;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(asset/image46.jpg);
+}
+
+.meditation::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 0.994) 4%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  z-index: 1;
+}
+
+.meditation::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 0.994) 4%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  z-index: 1;
+}
+
+.meditation .content {
+  max-width: 60rem;
+  z-index: 2;
+}
+.meditation .content h1 {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 4.7rem;
+  color: rgb(7, 89, 122);
+}
+
+.meditation .content p {
+  text-align: justify;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.meditation .content h3 {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin-bottom: 0.4rem;
+  margin-top: 3rem;
+}
+
+.meditation audio {
+  width: 300px; /* Adjust width */
+  height: 60px; /* Adjust height */
+  outline: none; /* Remove outline */
+  padding: 5px; /* Padding */
+  margin-top: 6px;
+}
+
+.meditation audio::-webkit-media-controls-panel {
+  background-color: #ffffff; /* Change control panel color */
+}
+
+.meditation audio::-webkit-media-controls-play-button {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.meditation audio::-webkit-media-controls-play-button:hover {
+  background-color: rgb(7, 89, 122);
+}
+
+.meditation audio::-webkit-media-controls-mute-button {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.meditation audio::-webkit-media-controls-mute-button:hover {
+  background-color: rgb(7, 89, 122);
+}
+
+.meditation audio::-webkit-media-controls-volume-slider {
+  background-color: rgb(7, 89, 122);
+  border-radius: 50%;
+}
+.meditation audio::-webkit-media-controls-panel {
+  background-color: rgb(0, 102, 143);
+}
+
+.discussion {
+  background-image: url(asset/image49.jpg);
+  display: flex;
+  padding: 7rem 9%;
+  justify-content: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+}
+
+.discussion::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 0.994) 4%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  z-index: 1;
+}
+
+.discussion .content {
+  max-width: 60rem;
+  z-index: 2;
+}
+
+.discussion .content h1 {
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+  font-size: 4.7rem;
+  color: rgb(7, 89, 122);
+}
+
+.discussion .content p {
+  text-align: justify;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.discussion .content .cta {
+  border-radius: 8px;
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  color: white;
+  background-color: rgb(7, 89, 122);
+  padding: 1rem 3rem;
+}
+
+.discussion .content .cta:hover {
+  background-color: white;
+  color: rgb(1, 12, 25);
+}
+
+/* Laptop */
+@media (max-width: 1280px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 70.5%;
+  }
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--color1);
+    width: 20rem;
+    height: 100vh;
+    transition: 0.5s;
+    flex-direction: column; /* Mengatur arah elemen menjadi kolom */
+    justify-content: flex-start; /* Menempatkan item di awal */
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: 8px;
+    font-size: 2rem;
+  }
+}
+/* Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 80%;
+    justify-content: flex-start;
+  }
+}

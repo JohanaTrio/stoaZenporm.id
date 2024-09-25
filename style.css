@@ -1,0 +1,691 @@
+:root {
+  --color1: rgb(1, 12, 25);
+  --color2: rgb(0, 0, 0);
+  --color3: rgb(1, 12, 25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  min-height: 2000px;
+  background-color: var(--color2);
+  color: white;
+}
+
+/*navbar*/
+.navbar {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4rem 4%;
+  background-color: var(--color1);
+  position: fixed;
+  top: 0%;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+}
+
+.navbar .navbar-logo {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-clip: none;
+  background-position: 0;
+}
+
+.navbar .navbar-nav {
+  margin-left: auto; /* Mendorong elemen ke sisi kanan */
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0 1.6rem;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.navbar .navbar-nav a:hover {
+  color: rgb(7, 89, 122);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: rgb(7, 89, 122);
+}
+
+#menu {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(asset/firstphoto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.hero .content {
+  padding: 1rem 9%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  color: white;
+  font-size: 5.5em;
+  line-height: 1.4;
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.hero .content .cta {
+  margin-top: 1.2rem;
+  display: inline-block;
+  padding: 1rem 1.7rem;
+  color: white;
+  background-color: var(--color1);
+  font-size: 1.3rem;
+  z-index: 10;
+  position: relative;
+}
+
+.hero .content .cta:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(1, 13, 31);
+}
+
+.add {
+  min-height: 80vh;
+  display: block;
+  align-items: center;
+  background-image: url(asset/blackimg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.add::after {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 4%,
+    rgba(255, 255, 255, 0) 30%
+  );
+}
+.add .content {
+  margin: 5rem 8%;
+}
+.add .content p {
+  float: right;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: justify;
+  max-width: 60%;
+}
+
+.add .content video {
+  float: right;
+  margin-top: 3rem;
+  clear: right;
+  border-radius: 5px;
+}
+
+/*About*/
+.about {
+  display: flex;
+  padding: 7rem 9% 1.4rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about .background {
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+.about .background .image1 {
+  flex: 1 1 45rem;
+}
+
+.about .background .image1 img {
+  width: 80%;
+  border-radius: 20px;
+}
+
+.about .background .content {
+  text-align: justify;
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .background .content p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.about h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: rgb(26, 73, 119);
+}
+
+.about h3 {
+  font-size: 7rem;
+  margin-bottom: 0.6rem;
+}
+.about h4 {
+  font-size: 1.78rem;
+  font-weight: 100;
+  margin-bottom: 3.9rem;
+}
+
+.about .vandm p {
+  max-width: 56%;
+  text-align: justify;
+  font-size: 1.4rem;
+  font-weight: 100;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about .vandm p span {
+  font-size: 3rem;
+  color: rgb(26, 73, 119);
+}
+
+.teambitch {
+  text-align: justify;
+}
+
+.teambitch h5 {
+  font-size: 3rem;
+  margin-top: 7rem;
+  margin-bottom: 6rem;
+  text-align: center;
+  width: max-content;
+  display: inline-block !important;
+}
+
+.about h5 span {
+  color: black;
+  background-color: rgb(26, 73, 119);
+  padding: 1px 2px;
+}
+
+.about h5 span:hover {
+  color: rgb(26, 73, 119);
+  background-color: white;
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about .row .image-container {
+  text-align: center;
+}
+
+.about .row .image-container img {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.about .row .image-container .image-container-name {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.about .row .image-container .image-container-name:hover {
+  color: rgb(26, 73, 119);
+}
+
+/*Discover*/
+.discover {
+  display: flex;
+  padding: 7rem 6% 1.4rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(asset/peakpx1.jpg);
+  align-items: center;
+  position: relative;
+}
+.discover::after {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    1deg,
+    rgba(1, 1, 3, 1) 2%,
+    rgba(255, 255, 255, 0) 10%
+  );
+}
+
+.discover h3 span {
+  color: rgb(26, 73, 119);
+}
+.discover h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.discover img {
+  border-radius: 10px;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 2rem;
+}
+
+.discover p {
+  font-size: 1.4rem;
+  width: 90%;
+  text-align: justify;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.discover p span {
+  color: rgb(26, 73, 119);
+}
+
+.discover .title3 {
+  font-size: 3.6rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.6rem;
+  color: rgb(26, 73, 119);
+}
+
+.discover .Stoikage {
+  margin-top: 1.8rem;
+  font-size: 2.6rem;
+}
+
+.discover .listage .First {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.discover .listage .First .image-containerfirst {
+  text-align: center;
+}
+
+.discover .listage .First .image-containerfirst img {
+  border-radius: 10%;
+  width: 60%;
+  height: 60%;
+}
+
+.discover .listage .First .image-containerfirst-name {
+  margin-top: 0rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.discover .listage .Middle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.discover .listage .Middle .image-containersecond {
+  text-align: center;
+}
+.discover .listage .Middle .image-containersecond img {
+  border-radius: 10%;
+  width: 60%;
+  height: 60%;
+}
+
+.discover .listage .Middle .image-containersecond-name {
+  margin-top: 0rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.discover .listage .roman {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.discover .listage .roman .image-containerrome {
+  text-align: center;
+}
+.discover .listage .roman .image-containerrome img {
+  border-radius: 10%;
+  width: 60%;
+  height: 60%;
+}
+.discover .listage .roman .image-containerrome-name {
+  margin-top: 0rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.discover .Principle {
+  margin-top: 7rem;
+  font-size: 3rem;
+  color: rgb(26, 73, 119);
+}
+
+.discover .Principles {
+  display: block;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.discover .Principles .Pri1 {
+  margin-bottom: 2rem;
+}
+
+.Principles .Pri1 h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.89rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.Principles .Pri1 h3:hover {
+  background-color: var(--color3);
+  border: 3px solid var(--color3);
+}
+
+.discover .Principles .Pri1 h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.discover .Principles .Pri1 p {
+  margin-top: 3rem;
+  text-align: justify;
+  margin: auto;
+  max-width: 50%;
+}
+/*Resistor*/
+.discover .Principles .Pri2 {
+  margin-bottom: 2rem;
+}
+
+.Principles .Pri2 h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.3rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.Principles .Pri2 h3:hover {
+  background-color: var(--color3);
+  border: 3px solid var(--color3);
+}
+
+.discover .Principles .Pri2 h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.discover .Principles .Pri2 p {
+  margin-top: 3rem;
+  text-align: justify;
+  margin: auto;
+  max-width: 50%;
+}
+/*Resistor*/
+.discover .Principles .Pri3 {
+  margin-bottom: 2rem;
+}
+
+.Principles .Pri3 h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 1.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.Principles .Pri3 h3:hover {
+  background-color: var(--color3);
+  border: 3px solid var(--color3);
+}
+
+.discover .Principles .Pri3 h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.discover .Principles .Pri3 p {
+  margin-top: 3rem;
+  text-align: justify;
+  margin: auto;
+  max-width: 50%;
+}
+
+/*Resistor*/
+.discover .Principles .Pri4 {
+  margin-bottom: 2rem;
+}
+
+.Principles .Pri4 h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 1.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.Principles .Pri4 h3:hover {
+  background-color: var(--color3);
+  border: 3px solid var(--color3);
+}
+.discover .Principles .Pri4 h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+.discover .Principles .Pri4 p {
+  margin-top: 3rem;
+  text-align: justify;
+  margin: auto;
+  max-width: 50%;
+}
+
+.discover .Konsep {
+  margin-top: 5rem;
+  color: rgb(26, 73, 119);
+}
+.discover .Concept p {
+  margin: auto;
+}
+
+.Concept .typeofc {
+  font-weight: 200;
+  margin-bottom: 0.7rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.Concept .conceptofp {
+  margin: auto;
+  max-width: 60%;
+}
+
+.solution {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.solution h1 {
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.solution p {
+  padding: 1.4rem 9%;
+  text-align: justify;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.solution img {
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.solution h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.solution .p1 {
+  max-width: 64%;
+}
+
+.solution .p1 span {
+  color: rgb(26, 73, 119);
+  font-weight: 300;
+}
+
+/* Laptop */
+@media (max-width: 1280px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 70.5%;
+  }
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--color1);
+    width: 34rem;
+    height: 100vh;
+    transition: 0.5s;
+    flex-direction: column; /* Mengatur arah elemen menjadi kolom */
+    justify-content: flex-start; /* Menempatkan item di awal */
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: 8px;
+    font-size: 2rem;
+  }
+}
+
+/* Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 80%;
+    justify-content: flex-start;
+  }
+}
